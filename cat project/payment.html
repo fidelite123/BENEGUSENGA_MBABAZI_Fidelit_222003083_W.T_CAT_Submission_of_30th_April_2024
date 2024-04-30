@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multicurrency_Payment_System</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="
+sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css
+" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="
+sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<style>
+    /* Add your CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+    <nav>
+        <label class="logo">MULTICURRENCY_PAYMENT_SYSTEM <br>
+        </label>
+        <ul>
+            <a href="home.html">Home</a>
+            <a href="about.html">About us</a>
+            <a href="contact.html">Contact us</a>
+<a href="service.html">Services</a>
+        <a href="updateprofile.html">UpdateProfile</a>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Menu</a>
+                <div class="dropdown-content">
+                    <a href="logout.php">Logout</a>
+                    <a href="payment.html">Payment</a>
+                    <a href="invoice.html">Invoice</a>
+                    <a href="account.php">Account</a>
+                    <a href="Transaction_Currency.html">Transaction Currency</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+                  
+
+    <div class="container">
+        <h2>Payment Form</h2>
+        <form action="payment.php" method="POST">
+    <div class="form-group">
+        <label for="payment_name">Payment Name:</label>
+        <input type="text" id="payment_name" name="payment_name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="payment_amount">Payment Amount:</label>
+        <input type="number" id="payment_amount" name="payment_amount" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="receipt">Receipt:</label>
+        <input type="text" id="receipt" name="receipt" required>
+    </div>
+
+    <div class="form-group">
+        <label for="user_id">User Id:</label>
+        <input type="number" id="user_id" name="user_id" required>
+    </div>
+    <div class="form-group">
+        <label for="transaction_id">Transaction Id:</label>
+        <input type="number" id="transaction_id" name="transaction_id" required>
+    </div>
+    <input type="submit" value="Submit">
+</form>
+
+      </div>
+    
+</section><br><br><br>
+    <footer>
+       
+        <p>&copy; 2024 Multicurrency Payment system. All rights reserved.</p>
+    </footer>
+</body>
+</html>

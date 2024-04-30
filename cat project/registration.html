@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<style>
+body
+{
+    
+    background: url('./images/hom.jpeg') center/cover no-repeat;
+    
+  }
+</style>
+  <body
+bgcolor="chocolate">
+    <p><h1 style="color: black;  text-align: center; font-family:Elephant; font-weight: bold;">MULTICURRENCY PAYMENT SYSTEM</h1></p>
+     
+    <br>
+    <center>
+        <form id="registrationForm" action="registration.php" method="post" onsubmit="return validateForm()" style="background-color: lightgrey; align-items: center; width: 500px; height: 550px;">
+            <label style="font-weight: bold; font-size: 24px; color: grey;"><u>REGISTRATION FORM</u></label><br><br>
+            <label style="font-weight: bold;">USER_NAME</label>
+            <input type="text" name="user_name"><br><br>
+            <label style="font-weight: bold;">Email</label>
+            <input type="email" name="email"><br><br>
+            <label style="font-weight: bold;">ADDRESS</label>
+            <input type="text" name="address"><br><br>
+            <label style="font-weight: bold;">PHONE_NUMBER</label>
+            <input type="text" name="phone_number"><br><br>
+            <label style="font-weight: bold;">GENDER</label>
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female">Female<br><br>
+            <label style="font-weight: bold;">USER_CURRENCY</label>
+            <select name="user_currency">
+                <option>USD</option>
+                <option selected>RWF</option>
+                <option>GBP</option>
+                <option>EUR</option>
+            </select><br><br>
+            <label style="font-weight: bold;">PASSWORD</label>
+            <input type="password" name="password"><br><br>
+            <input type="submit" name="submit" value="REGISTER" style="background-color: grey;color: white; font-family: times new roman; font-weight: bold; font-size: 18px; height: 45px; border-radius: 8px; width: 130px; padding: 10px; border: none;">
+            <input type="reset" name="reset" value="CANCEL" style="background-color: yellowgreen;color: white; font-family: times new roman; font-weight: bold; font-size: 18px; height: 45px; border-radius: 8px; width: 130px; padding: 10px; border: none;">
+        </form>
+    </center>
+    <p><h3 style="color: white;"><marquee> Designed BY BENEGUSENGA MBABAZI Fidelite  &copyCopy_right_2024</marquee></h3></p>
+
+    <script>
+        function validateForm() {
+            var name = document.forms["registrationForm"]["user_name"].value;
+            var email = document.forms["registrationForm"]["email"].value;
+            var address = document.forms["registrationForm"]["address"].value;
+            var phoneNumber = document.forms["registrationForm"]["phone_number"].value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var userCurrency = document.forms["registrationForm"]["user_currency"].value;
+            var password = document.forms["registrationForm"]["password"].value;
+
+            if (user_name == "" || email == "" || address == "" || phoneNumber == "" || gender == null || userCurrency == "" || password == "") {
+                alert("All fields are required");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

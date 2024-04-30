@@ -1,0 +1,68 @@
+<!-- admin_dashboard.php -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome, <?php echo $_SESSION['admin_name']; ?>!</h2>
+        <p>This is the admin dashboard.</p>
+        <ul>
+            <li><a href="user.html">User</a></li>
+            <a href="payment.html">Payment</a>
+        <a href="invoice.html">Invoice</a>
+        <a href="account.php">Account</a>
+        <a href="transaction_currency.html">Transaction Currency</a>
+            <li><a href="admin_logout.php">Logout</a></li>
+        </ul>
+    </div>
+</body>
+</html>
